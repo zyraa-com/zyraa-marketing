@@ -114,6 +114,16 @@ export const HERO_STATS: HeroStat[] = [
   { num: "0", label: "config files" },
 ];
 
+export const ENTERPRISE_CALENDLY_URL = "https://calendly.com/shahwaizislam1404";
+
+export const ENTERPRISE_PLAN_ITEMS = [
+  "Unlimited builds",
+  "All frameworks",
+  "Custom integrations",
+  "Dedicated support",
+  "SLA & invoicing",
+];
+
 export const CLI_INSTALL_CMD = "npm install -g zyra-cli";
 
 export const GITHUB_URL = "https://github.com/zyraa-com";

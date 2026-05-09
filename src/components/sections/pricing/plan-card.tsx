@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -7,8 +8,10 @@ interface PlanCardProps {
   period: string;
   items: readonly string[];
   featured?: boolean;
+  disabled?: boolean;
   ctaLabel: string;
   ctaVariant?: "brand" | "brand-outline";
+  ctaHref?: string;
 }
 
 export function PlanCard({
@@ -17,8 +20,10 @@ export function PlanCard({
   period,
   items,
   featured,
+  disabled,
   ctaLabel,
   ctaVariant = "brand-outline",
+  ctaHref,
 }: PlanCardProps) {
   return (
     <div
@@ -60,8 +65,12 @@ export function PlanCard({
         ))}
       </ul>
 
-      <Button variant={ctaVariant} size="xl" className="w-full">
-        {ctaLabel}
+      <Button variant={ctaVariant} size="xl" className="w-full" disabled={disabled} asChild={!!ctaHref && !disabled}>
+        {ctaHref && !disabled ? (
+          <Link href={ctaHref} target="_blank" rel="noopener noreferrer">
+            {ctaLabel}
+          </Link>
+        ) : disabled ? "Coming soon" : ctaLabel}
       </Button>
     </div>
   );
