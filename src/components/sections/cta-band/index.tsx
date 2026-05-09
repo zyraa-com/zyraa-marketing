@@ -1,5 +1,8 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { GlowOrb } from "@/components/ui/glow-orb";
+import { InstallCmd } from "@/components/shared/install-cmd";
+import { AUTH_URL } from "@/lib/env";
 
 export function CtaBand() {
   return (
@@ -35,18 +38,15 @@ export function CtaBand() {
       </p>
 
       <div className="relative flex gap-3 justify-center flex-wrap mb-9">
-        <Button variant="brand" size="xl">
-          Get started free
+        <Button variant="brand" size="xl" asChild>
+          <Link href={`${AUTH_URL}/register`}>Get started free</Link>
         </Button>
-        <Button variant="outline" size="xl">
+        {/* <Button variant="outline" size="xl">
           View docs
-        </Button>
+        </Button> */}
       </div>
 
-      <div className="relative inline-flex items-center gap-3 bg-surface border border-border-mid rounded-[9px] px-5.5 py-3 font-mono text-[13px]">
-        <span className="text-brand font-bold">$</span>
-        <span className="text-foreground">npm install -g zyra-cli</span>
-      </div>
+      <InstallCmd />
     </div>
   );
 }

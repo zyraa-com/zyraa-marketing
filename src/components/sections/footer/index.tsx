@@ -1,22 +1,21 @@
+import Link from "next/link";
 import { FOOTER_LINKS } from "@/lib/constants";
+import { Logo } from "@/components/shared/logo";
 
 export function Footer() {
   return (
     <footer className="border-t border-border px-6 md:px-13 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
-      <span className="font-sans font-extrabold tracking-[-0.03em] leading-none text-[18px]">
-        <span className="text-brand-l">Z</span>
-        <span className="text-foreground">yraa</span>
-      </span>
+      <Logo />
 
       <ul className="flex gap-6 list-none p-0 m-0">
         {FOOTER_LINKS.map((link) => (
           <li key={link.label}>
-            <a
+            <Link
               href={link.href}
               className="text-[13px] text-fg-subtle hover:text-muted-foreground transition-colors no-underline"
             >
               {link.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

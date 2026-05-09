@@ -1,9 +1,12 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { GlowOrb } from "@/components/ui/glow-orb";
+import { AUTH_URL } from "@/lib/env";
 import { HeroBgGrid } from "./hero-bg-grid";
 import { HeroCmd } from "./hero-cmd";
 import { HeroPill } from "./hero-pill";
 import { HeroStats } from "./hero-stats";
+import { InstallCmd } from "../shared/install-cmd";
 
 export function Hero() {
   return (
@@ -47,20 +50,20 @@ export function Hero() {
 
       <p className="relative z-1 text-[18px] text-muted-foreground leading-[1.65] max-w-130 mb-9 animate-[fade-up_0.7s_cubic-bezier(0.22,1,0.36,1)_0.22s_both]">
         Type a prompt. Zyra picks the stack, generates every file, and installs
-        dependencies — without leaving your terminal.
+        dependencies - without leaving your terminal.
       </p>
 
       <div className="relative z-1 flex gap-3 justify-center flex-wrap mb-13 animate-[fade-up_0.7s_cubic-bezier(0.22,1,0.36,1)_0.36s_both]">
-        <Button variant="brand" size="xl">
-          Get started free
+        <Button variant="brand" size="xl" asChild>
+          <Link href={`${AUTH_URL}/register`}>Get started free</Link>
         </Button>
         <Button variant="outline" size="xl" asChild>
-          <a href="#how">See how it works</a>
+          <Link href="#how">See how it works</Link>
         </Button>
       </div>
 
       <div className="relative z-1 animate-[fade-up_0.7s_cubic-bezier(0.22,1,0.36,1)_0.5s_both]">
-        <HeroCmd />
+        <InstallCmd />
       </div>
 
       <HeroStats />

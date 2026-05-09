@@ -15,7 +15,6 @@ export const NAV_LINKS = [
   { label: "How it works", href: "#how" },
   { label: "Features", href: "#features" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Docs", href: "#" },
 ] as const;
 
 export interface Step {
@@ -115,9 +114,12 @@ export const HERO_STATS: HeroStat[] = [
   { num: "0", label: "config files" },
 ];
 
+export const CLI_INSTALL_CMD = "npm install -g zyra-cli";
+
+export const GITHUB_URL = "https://github.com/zyraa-com";
+
 export const FOOTER_LINKS = [
-  { label: "Docs", href: "#" },
-  { label: "GitHub", href: "#" },
+  { label: "GitHub", href: GITHUB_URL },
   { label: "Privacy", href: "#" },
   { label: "Terms", href: "#" },
 ] as const;

@@ -17,9 +17,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zyraa — AI-powered full-stack builder",
+  title: "Zyraa | AI-powered full-stack builder",
   description:
-    "Type a prompt. Zyra picks the stack, generates every file, and installs dependencies — without leaving your terminal.",
+    "Type a prompt. Zyra picks the stack, generates every file, and installs dependencies - without leaving your terminal.",
 };
 
 export default function RootLayout({

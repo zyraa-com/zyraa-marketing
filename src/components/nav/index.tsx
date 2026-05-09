@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Logo } from "./logo";
+import { Logo } from "@/components/shared/logo";
 import { MobileMenu } from "./mobile-menu";
 import { NavLinks } from "./nav-links";
 import { ThemeToggle } from "./theme-toggle";
+import Link from "next/link";
 
-const authUrl = process.env.NEXT_PUBLIC_AUTH_URL ?? "http://localhost:3001";
+import { AUTH_URL } from "@/lib/env";
 
 export function Nav() {
   return (
@@ -19,10 +20,10 @@ export function Nav() {
           className="hidden sm:inline-flex"
           asChild
         >
-          <a href={`${authUrl}/login`}>Sign in</a>
+          <Link href={`${AUTH_URL}/login`}>Sign in</Link>
         </Button>
         <Button variant="brand" size="sm" asChild>
-          <a href={`${authUrl}/register`}>Get started</a>
+          <Link href={`${AUTH_URL}/register`}>Get started</Link>
         </Button>
         <MobileMenu />
       </div>

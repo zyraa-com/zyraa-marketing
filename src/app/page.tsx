@@ -1,6 +1,5 @@
 import { Hero } from "@/components/hero";
 import { Nav } from "@/components/nav";
-import { CodeExample } from "@/components/sections/code-example";
 import { CtaBand } from "@/components/sections/cta-band";
 import { Features } from "@/components/sections/features";
 import { Footer } from "@/components/sections/footer";
@@ -23,7 +22,6 @@ export default function Home() {
         <Divider />
         <Features />
         <Divider />
-        <CodeExample />
         <Divider />
         <Pricing />
       </main>
