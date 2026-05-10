@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { CookieThemeSync } from "@/components/providers/cookie-theme-sync";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 
 const dmSans = DM_Sans({
@@ -40,7 +39,6 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <CookieThemeSync />
           {children}
         </ThemeProvider>
       </body>

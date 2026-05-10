@@ -3,7 +3,6 @@
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
 
-// Leave empty for localhost dev. Set to .yourdomain.com in production.
 const COOKIE_DOMAIN = process.env.NEXT_PUBLIC_COOKIE_DOMAIN;
 
 function writeCookie(value: string) {
@@ -11,7 +10,7 @@ function writeCookie(value: string) {
   document.cookie = `zyraa-theme=${value};path=/${domain};max-age=31536000;SameSite=Lax`;
 }
 
-export function CookieThemeSync() {
+export function useCookieThemeSync() {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
@@ -29,6 +28,4 @@ export function CookieThemeSync() {
     window.addEventListener("pageshow", handlePageShow);
     return () => window.removeEventListener("pageshow", handlePageShow);
   }, []);
-
-  return null;
 }
