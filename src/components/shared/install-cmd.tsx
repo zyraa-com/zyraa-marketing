@@ -41,7 +41,7 @@ export function InstallCmd() {
       <button
         type="button"
         onClick={() => copy(CLI_INSTALL_CMD)}
-        className="relative z-10 ml-1 flex size-6 items-center justify-center rounded-md text-fg-subtle transition-all duration-200 hover:bg-white/4 hover:text-foreground"
+        className="relative z-10 ml-1 flex size-6 items-center justify-center rounded-md text-fg-subtle transition-all duration-200 hover:bg-white/4 hover:text-foreground cursor-pointer"
         aria-label="Copy install command"
       >
         {copied ? (
