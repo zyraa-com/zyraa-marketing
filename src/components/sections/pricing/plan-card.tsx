@@ -65,12 +65,22 @@ export function PlanCard({
         ))}
       </ul>
 
-      <Button variant={ctaVariant} size="xl" className="w-full" disabled={disabled} asChild={!!ctaHref && !disabled}>
+      <Button
+        variant={ctaVariant}
+        size="xl"
+        className="w-full"
+        disabled={disabled}
+        asChild={!!ctaHref && !disabled}
+      >
         {ctaHref && !disabled ? (
           <Link href={ctaHref} target="_blank" rel="noopener noreferrer">
             {ctaLabel}
           </Link>
-        ) : disabled ? "Coming soon" : ctaLabel}
+        ) : disabled ? (
+          "Coming soon"
+        ) : (
+          ctaLabel
+        )}
       </Button>
     </div>
   );

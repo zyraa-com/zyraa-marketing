@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
 import { TERMINAL_LINES } from "@/constants/terminal-demo";
+import { cn } from "@/lib/utils";
 import { TerminalWindow } from "./terminal-window";
 
 interface TerminalDemoProps {

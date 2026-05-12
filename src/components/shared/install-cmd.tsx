@@ -1,9 +1,9 @@
 "use client";
 
 import { Check, Copy } from "lucide-react";
-import { CLI_INSTALL_CMD } from "@/lib/constants";
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
 import { useGlintEffect } from "@/hooks/useGlintEffect";
+import { CLI_INSTALL_CMD } from "@/lib/constants";
 
 export function InstallCmd() {
   const { copied, copy } = useCopyToClipboard();

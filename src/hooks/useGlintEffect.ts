@@ -17,7 +17,7 @@ export function useGlintEffect() {
 
       if (glintRef.current) {
         const left = s.x * 115 - 92;
-        const falloff = Math.max(0, 1 - Math.pow(Math.abs(s.x - 0.5) * 1.65, 2));
+        const falloff = Math.max(0, 1 - (Math.abs(s.x - 0.5) * 1.65) ** 2);
         glintRef.current.style.left = `${left}%`;
         glintRef.current.style.opacity = `${s.hover * falloff * 0.68}`;
       }
