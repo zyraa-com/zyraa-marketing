@@ -2,9 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { AUTH_URL, HOME_URL } from "@/lib/env";
+import { APP_URL } from "@/lib/env";
 import { cn } from "@/lib/utils";
 
 interface Props {
@@ -15,10 +14,11 @@ interface Props {
 
 export function UserMenu({ name, email, image }: Props) {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
 
   const initial = name[0]?.toUpperCase() ?? "U";
-  const signOutUrl = `${AUTH_URL}/auth/signout?callbackUrl=${encodeURIComponent(`${HOME_URL}${pathname}`)}`;
+  // Route through my-app logout: clears JWT cookie there, then auth app
+  // signs out the NextAuth session, then redirects back to home (localhost:3000).
+  const signOutUrl = `${APP_URL}/api/auth/logout`;
 
   return (
     <div className="relative">
