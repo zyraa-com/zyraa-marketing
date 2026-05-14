@@ -70,7 +70,7 @@ export const FEATURES: Feature[] = [
   {
     icon: KeyRound,
     title: "Browser OAuth",
-    body: "Run zyra login — approve in your browser once, done.",
+    body: "Run zyraa login — approve in your browser once, done.",
   },
   {
     icon: Zap,
