@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getToken } from "next-auth/jwt";
 import { Logo } from "@/components/shared/logo";
 import { Button } from "@/components/ui/button";
-import { AUTH_URL, NEXTAUTH_SECRET } from "@/lib/env";
+import { AUTH_URL, NEXTAUTH_SECRET, IS_PRODUCTION } from "@/lib/env";
 import { MobileMenu } from "./mobile-menu";
 import { NavLinks } from "./nav-links";
 import { ThemeToggle } from "./theme-toggle";
@@ -21,6 +21,9 @@ export async function Nav() {
       headers: Object.fromEntries(headersList.entries()),
     } as Parameters<typeof getToken>[0]["req"],
     secret: NEXTAUTH_SECRET,
+    cookieName: IS_PRODUCTION
+      ? "__Secure-next-auth.session-token"
+      : "next-auth.session-token",
   });
 
   return (

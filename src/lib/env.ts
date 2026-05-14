@@ -12,3 +12,5 @@ export const COOKIE_DOMAIN = process.env.NEXT_PUBLIC_COOKIE_DOMAIN ?? "";
 
 // ── Server-side ──────────────────────────────────────────────────────────────
 export const NEXTAUTH_SECRET = process.env.NEXTAUTH_SECRET ?? "";
+
+export const IS_PRODUCTION = process.env.NODE_ENV === "production";
