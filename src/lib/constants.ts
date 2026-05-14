@@ -126,7 +126,7 @@ export const ENTERPRISE_PLAN_ITEMS = [
 
 export const CLI_INSTALL_CMD = "npm install -g zyra-cli";
 
-export const GITHUB_URL = "https://github.com/zyraa-com";
+export const GITHUB_URL = "https://github.com/zyraalabs";
 
 export const FOOTER_LINKS = [
   { label: "GitHub", href: GITHUB_URL },
