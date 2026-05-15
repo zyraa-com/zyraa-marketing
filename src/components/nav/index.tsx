@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getToken } from "next-auth/jwt";
 import { Logo } from "@/components/shared/logo";
 import { Button } from "@/components/ui/button";
-import { AUTH_URL, NEXTAUTH_SECRET, IS_PRODUCTION } from "@/lib/env";
+import { AUTH_URL, NEXTAUTH_SECRET, IS_PRODUCTION, APP_URL } from "@/lib/env";
 import { MobileMenu } from "./mobile-menu";
 import { NavLinks } from "./nav-links";
 import { ThemeToggle } from "./theme-toggle";
@@ -49,7 +49,7 @@ export async function Nav() {
               <Link href={`${AUTH_URL}/login`}>Sign in</Link>
             </Button>
             <Button variant="brand" size="sm" asChild>
-              <Link href={`${AUTH_URL}/register`}>Get started</Link>
+              <Link href={`${APP_URL}/dashboard`}>Get started</Link>
             </Button>
           </>
         )}

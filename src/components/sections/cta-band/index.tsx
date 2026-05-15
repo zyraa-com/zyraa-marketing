@@ -2,7 +2,7 @@ import Link from "next/link";
 import { InstallCmd } from "@/components/shared/install-cmd";
 import { Button } from "@/components/ui/button";
 import { GlowOrb } from "@/components/ui/glow-orb";
-import { AUTH_URL } from "@/lib/env";
+import { APP_URL } from "@/lib/env";
 
 export function CtaBand() {
   return (
@@ -29,7 +29,7 @@ export function CtaBand() {
 
       <div className="relative flex gap-3 justify-center flex-wrap mb-9">
         <Button variant="brand" size="xl" asChild>
-          <Link href={`${AUTH_URL}/register`}>Get started free</Link>
+          <Link href={`${APP_URL}/dashboard`}>Get started free</Link>
         </Button>
         {/* <Button variant="outline" size="xl">
           View docs

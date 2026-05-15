@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { GlowOrb } from "@/components/ui/glow-orb";
-import { AUTH_URL } from "@/lib/env";
+import { APP_URL } from "@/lib/env";
 import { InstallCmd } from "../shared/install-cmd";
 import { HeroBgGrid } from "./hero-bg-grid";
 import { HeroPill } from "./hero-pill";
@@ -40,7 +40,7 @@ export function Hero() {
 
       <div className="relative z-1 flex gap-3 justify-center flex-wrap mb-13 animate-[fade-up_0.7s_cubic-bezier(0.22,1,0.36,1)_0.36s_both]">
         <Button variant="brand" size="xl" asChild>
-          <Link href={`${AUTH_URL}/register`}>Get started free</Link>
+          <Link href={`${APP_URL}/dashboard`}>Get started free</Link>
         </Button>
         <Button variant="outline" size="xl" asChild>
           <Link href="#how">See how it works</Link>
